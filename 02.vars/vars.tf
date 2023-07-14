@@ -40,4 +40,7 @@ variable "example_map" {
     }
   
 }
+output "example_map_op" {
+    value = "We are learning ${var.example_map["Training"]} and mode of it is ${var.example_map["Mode"]}"
   
+}
