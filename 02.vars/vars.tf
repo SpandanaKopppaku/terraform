@@ -30,4 +30,14 @@ output "example_list_op" {
     value = "Welcome to ${var.example_list[1]} with ${var.example_list[0]}" 
     
 }
+
+# what is a map variable? A variable with multiple key value pairs is reffered as map variable
+
+variable "example_map" {
+    default = {
+        Training = "DevOpswithAWS"
+        Mode     = "Online"
+    }
+  
+}
   
