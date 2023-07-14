@@ -19,7 +19,7 @@ output "sample_var_op" {
 # List Varaibale
 variable "example_list" {
     default = {
-        "AWS" ,
+        "AWS",
         "DEVOPS" ,
         "Terraform",
 
