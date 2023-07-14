@@ -9,7 +9,7 @@ output "sample_op"{
 }
 
 output "sample_var_op" {
-    value = "Value of the variable is ${var.sample_op}"
+    value = "Value of the variable is ${var.sample}"
     }
 
 # A Variable can be accessed directly by calling it as var.variableName, but if you're accessing in between a set of strings, then you need to enclose them in quotes and it should referred using ${var.VarName}
