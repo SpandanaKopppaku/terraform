@@ -22,7 +22,12 @@ variable "example_list" {
         "AWS" ,
         "DEVOPS" ,
         "Terraform",
-        
-    }
-  
+
+    } 
 }
+
+output "example_list_op" {
+    value = "Welcome to ${var.example_list[1]} with ${var.example_list[0]}" 
+    
+}
+  
