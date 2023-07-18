@@ -6,6 +6,6 @@ resource "aws_instance" "app_server" {
 
 
 tags = {
-    Name = "Linux_server_with_Remote_backend"
+    Name = "Linux_server_with_Remote.backend"
   }
 }
