@@ -5,4 +5,4 @@ resource "aws_instance" "app_server" {
 
 }
 
-variable "sg" {}
+variable "sg" {}   # step 3 : Now to use this info, declare an empty varianble and use it ( in root module, we have declared " sg = var.sgid )
