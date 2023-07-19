@@ -1,5 +1,5 @@
-resource "aws_security_group" "allow_all" {
-  name        = "allow_tls"
+resource "aws_security_group" "allows_all" {
+  name        = "allows_tls"
   description = "Allows SSH inbound traffic"
 
   ingress {
@@ -18,11 +18,11 @@ resource "aws_security_group" "allow_all" {
   }
 
   tags = {
-    Name = "allow_tls"
+    Name = "allows_tls"
   }
 }
 
 # Step 1 : Declaring the output that we wish to pass to the root Module
 output "sgid" {
-    value = aws_security_group.allow_all.id
+    value = aws_security_group.allows_all.id
 }
