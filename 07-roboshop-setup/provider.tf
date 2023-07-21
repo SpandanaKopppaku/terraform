@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket         = "b54-tf-state"
-    key            = "modules-example/terraform.tfstate"     # This is like the folder path that you prefer giving
+    key            = "robot/terraform.tfstate"     # This is like the folder path that you prefer giving
     region         = "us-east-1"
   }
 }
