@@ -1,10 +1,16 @@
-resource "aws_instance" "sample" {
-  ami                     = data.aws_ami.image.id
-  instance_type           = "t3.nano"
-  vpc_security_group_ids  = [var.sg]
+# Creates EC2 SPOT Instance
+resource "aws_spot_instance_request" "spot_worker" {
+  ami                        = data.aws_ami.image.id
+  instance_type              = "t3.micro"
+  vpc_security_group_ids     = [aws_security_group.allows_all.id]
+  wait_for_fulfillment       = true
+
+  tags = {
+    Name = var.COMPONENT
+  }
 
    # This will be executed on the top of the machine once it's created
-  provisioner "remote-exec" {
+provisioner "remote-exec" {
 
     # connection block establishes connection to this
     connection {
