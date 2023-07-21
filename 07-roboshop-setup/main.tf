@@ -3,7 +3,7 @@ module "frontend" {
 
     for_each    = toset( ["mongodb", "catalogue", "cart"] )
     COMPONENT   = each.key
-     // APP_VERSION = each.value.APP_VERSION
+     
 
 }
 
