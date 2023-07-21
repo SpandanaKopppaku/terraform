@@ -1,4 +1,4 @@
-module "frontend" {
+module "server" {
     source      = "./ec2"
 
     for_each    = toset( ["mongodb", "catalogue", "redis","user","cart","mysql","shipping","rabbitmq","payment","frontend"] )
